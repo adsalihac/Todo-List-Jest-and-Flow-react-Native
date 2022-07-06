@@ -8,7 +8,7 @@ import type {Node} from 'react'
 type PropsType = {||};
 
 type StateType = {
-    name: string
+    data : Array<Object>
 };
 
 class App extends Component<PropsType, StateType> {
@@ -16,7 +16,7 @@ class App extends Component<PropsType, StateType> {
     constructor(props: PropsType) {
         super(props);
         this.state = {
-            name: 'John'
+          data: [{},{}]
         };
     }
 

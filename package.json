@@ -10,9 +10,11 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "eslint-plugin-jest-dom": "^4.0.2",
     "jest-environment-jsdom": "^26.6.2",
     "react": "18.0.0",
-    "react-native": "0.69.1"
+    "react-native": "0.69.1",
+    "react-shallow-testutils": "^3.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",

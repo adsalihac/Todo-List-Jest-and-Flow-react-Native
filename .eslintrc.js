@@ -8,4 +8,5 @@ module.exports = {
     "jest-dom/prefer-required": "error",
     "jest-dom/prefer-to-have-attribute": "error",
   },
+
 };
