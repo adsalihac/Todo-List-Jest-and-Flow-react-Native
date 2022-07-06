@@ -3,8 +3,22 @@ import ShallowRenderer from 'react-test-renderer/shallow'
 
 import App from './app'
 
+let renderer: ShallowRenderer;
+
 const renderApp = () => {
-    const renderer = new ShallowRenderer()
     renderer.render(<App />)
     return renderer.getRenderOutput()
-    }
+}
+
+describe('app', () => {
+
+    beforeEach(() => {
+        renderer = new ShallowRenderer()
+    });
+
+    it('renders correctly', () => {
+        const result = renderApp()
+        expect(result).toMatchSnapshot()
+    })
+});
+
