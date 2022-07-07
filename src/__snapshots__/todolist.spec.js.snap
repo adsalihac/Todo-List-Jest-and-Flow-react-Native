@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`todolist component renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+      "margin": 10,
+    }
+  }
+>
+  <FlatList
+    ListEmptyComponent={
+      <Text>
+        No data
+      </Text>
+    }
+    keyExtractor={[Function]}
+    renderItem={[Function]}
+  />
+</View>
+`;

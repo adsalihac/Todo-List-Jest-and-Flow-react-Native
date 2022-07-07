@@ -43,6 +43,24 @@ exports[`app renders correctly 1`] = `
       title="Click"
     />
   </View>
+  <TodoList
+    data={
+      Array [
+        Object {
+          "id": 1,
+          "name": "data1",
+        },
+        Object {
+          "id": 2,
+          "name": "data2",
+        },
+        Object {
+          "id": 3,
+          "name": "data3",
+        },
+      ]
+    }
+  />
 </View>
 `;
 
@@ -89,5 +107,27 @@ exports[`app renders correctly with empty inputs 1`] = `
       title="Click"
     />
   </View>
+  <TodoList
+    data={
+      Array [
+        Object {
+          "id": 1,
+          "name": "data1",
+        },
+        Object {
+          "id": 2,
+          "name": "data2",
+        },
+        Object {
+          "id": 3,
+          "name": "data3",
+        },
+        Object {
+          "id": 4,
+          "name": "taskname",
+        },
+      ]
+    }
+  />
 </View>
 `;

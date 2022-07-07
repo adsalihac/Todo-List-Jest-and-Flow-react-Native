@@ -4,6 +4,7 @@ import { Text, View } from 'react-native'
 import React, { Component } from 'react'
 import Button from './button'
 import Input from './input'
+import TodoList from './todolist'
 
 import type { Node } from 'react'
 import { types } from '@babel/core'
@@ -31,18 +32,23 @@ class App extends Component<PropsType, StateType> {
     };
   }
 
- 
-  setData: (field: string) =>  (value: string) => void = 
-  (field: string) => (value: string) => {
-    this.setState({[field]: value});
-  }
+
+  setData: (field: string) => (value: string) => void =
+    (field: string) => (value: string) => {
+      this.setState({ [field]: value });
+    }
 
   addItem: () => void = () => {
-      const { data, text }
+    const { data, text }
       = this.state;
+
+    if (text.length) {
       const newData = { id: data.length + 1, name: text };
       this.setState({ data: [...data, newData], text: '' });
-      console.log("newData" ,JSON.stringify( this.state.data));
+      console.log("newData", JSON.stringify(this.state.data));
+    } else {
+     alert("ff")
+    }
   }
 
   render(): Node {
@@ -53,7 +59,7 @@ class App extends Component<PropsType, StateType> {
       state: { data, text }
     } = this;
 
-   
+
     return (
       <View style={{ flex: 1, backgroundColor: "white" }}>
         <View style={{ flexDirection: 'row', alignItems: 'center' }}>
@@ -62,7 +68,7 @@ class App extends Component<PropsType, StateType> {
             value={text}
             onChangeText={setData('text')}
           />
-    
+
           <Button
             title="Click"
             onPress={addItem}
@@ -70,6 +76,8 @@ class App extends Component<PropsType, StateType> {
             style={{ backgroundColor: "blue", width: 80, height: 40, borderRadius: 5, justifyContent: "center", alignItems: "center", marginRight: 5 }}
           />
         </View>
+
+        <TodoList data={data} />
       </View>
     )
   }
