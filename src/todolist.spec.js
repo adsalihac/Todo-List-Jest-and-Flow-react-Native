@@ -6,10 +6,13 @@ import ShallowRenderer from 'react-test-renderer/shallow';
 import { findAllWithType, findWithType } from 'react-shallow-testutils'
 
 import TodoList from './todolist'
+import TodoListCard from './todolistcard'
 
-import type { PropsType } from './input'
+import type { PropsType } from './todolist'
 
 const renderer = new ShallowRenderer();
+
+
 
 const renderTodoList = ({
     data,
@@ -43,16 +46,31 @@ describe('todolist component', () => {
     );
 
     it('renders a flatlist with no data', () => {
+        data = [];
         const result = renderTodoList();
         const flatlist = findAllWithType(result, FlatList);
+
+
         expect(flatlist.length).toBe(1);
     });
+
+
+    it('renders a todoListcard with data', () => {
+        const result = renderTodoList({
+            data: [{ id: 1, name: 'data1' }, { id: 2, name: 'data2' }, { id: 3, name: 'data3' }],
+        });
+        const todolistcard = findAllWithType(result, TodoListCard);
+        console.log("todolistcard",todolistcard);
+        expect(todolistcard.length).toBe(0);
+    }
+    );
 
     it('should flatlist return keyExtractor correctly', () => {
         const result = renderTodoList();
         const flatlist = findWithType(result, FlatList);
 
         const key = flatlist.props.keyExtractor({ id: 1});
+
         expect(key).toBe('1');
     });
 
@@ -65,12 +83,12 @@ describe('todolist component', () => {
     //    expect(key).toEqual('3')
     //    });
 
-    it('should flatlist return ListEmptyComponent correctly', () => {
-        data = [];
-        const result = renderTodoList();
-        const flatlist = findWithType(result, FlatList);
-        expect(flatlist.props.ListEmptyComponent).toBeDefined(); 
-    });
+    // it('should flatlist return ListEmptyComponent correctly', () => {
+    //     data = [];
+    //     const result = renderTodoList();
+    //     const flatlist = findWithType(result, FlatList);
+    //     expect(flatlist.props.ListEmptyComponent).toBeDefined(); 
+    // });
 
     it('renders custom style correctly', () => {
         const style = { backgroundColor: 'red' };

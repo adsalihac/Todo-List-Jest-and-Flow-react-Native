@@ -5,6 +5,8 @@ import React from 'react'
 
 import type { Node } from 'react'
 
+import TodoListCard from './todolistcard'
+
 import type {
     TextStyleProp,
     ViewStyleProp
@@ -26,9 +28,7 @@ const TodoList = (
                     <Text>No data</Text>
                 }
                 renderItem={({item}) => 
-                    <View style={styles.container}>
-                        <Text style={{color:"white"}}>{item.name}</Text>
-                    </View>
+                  <TodoListCard name={item.name} / >
                 }
                 keyExtractor={item => item.id.toString()}
             />
@@ -38,8 +38,3 @@ const TodoList = (
 
 export default TodoList
 
-const styles = StyleSheet.create({
-    container: {
-    flexDirection:'row', height:40, backgroundColor:"blue" , marginBottom:10 , alignItems:'center', padding:10
-    },
-})

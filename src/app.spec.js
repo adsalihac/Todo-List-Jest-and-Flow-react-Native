@@ -65,6 +65,10 @@ describe('app', () => {
 
         console.log("TEXT", instance.state.text);
 
+    //     global.alert = jest.fn();
+    //   expect(global.alert).toHaveBeenCalledTimes(1);
+
+
         const button = findWithType(result, Button);
         button.props.onPress();
     });

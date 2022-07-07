@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`todolistcard component renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "blue",
+      "borderRadius": 5,
+      "flexDirection": "row",
+      "height": 40,
+      "justifyContent": "space-between",
+      "marginBottom": 10,
+      "paddingLeft": 10,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "white",
+      }
+    }
+  />
+  <Button
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "red",
+        "borderRadius": 5,
+        "height": 40,
+        "justifyContent": "center",
+        "width": 80,
+      }
+    }
+    tilteStyle={
+      Object {
+        "fontSize": 14,
+      }
+    }
+    title="Delete"
+  />
+</View>
+`;

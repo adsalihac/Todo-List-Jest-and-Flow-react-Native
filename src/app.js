@@ -1,6 +1,6 @@
 // @flow
 
-import { Text, View } from 'react-native'
+import { Text, View , Alert} from 'react-native'
 import React, { Component } from 'react'
 import Button from './button'
 import Input from './input'
@@ -47,7 +47,10 @@ class App extends Component<PropsType, StateType> {
       this.setState({ data: [...data, newData], text: '' });
       console.log("newData", JSON.stringify(this.state.data));
     } else {
-     alert("ff")
+     Alert.alert("Alert", "Enter input", [{ text: "OK" }], {
+      cancelable: true,
+    });
+   
     }
   }
 

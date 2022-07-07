@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for button.js</title>
+    <title>Code coverage report for todolistcard.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="prettify.css" />
     <link rel="stylesheet" href="base.css" />
@@ -19,7 +19,7 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="index.html">All files</a> button.js</h1>
+        <h1><a href="index.html">All files</a> todolistcard.js</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
@@ -103,7 +103,9 @@
 <a name='L38'></a><a href='#L38'>38</a>
 <a name='L39'></a><a href='#L39'>39</a>
 <a name='L40'></a><a href='#L40'>40</a>
-<a name='L41'></a><a href='#L41'>41</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -123,8 +125,10 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -136,53 +140,55 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// @flow
 &nbsp;
-&nbsp;
+import { View, Text, TextInput, StyleSheet, FlatList, TouchableOpacity } from 'react-native'
 import React from 'react'
-import {StyleSheet, Text , TouchableHighlight, TouchableOpacity, View} from 'react-native'
 &nbsp;
-import type {Node} from 'react'
+import Button from './button'
+&nbsp;
+import type { Node } from 'react'
 &nbsp;
 import type {
     TextStyleProp,
     ViewStyleProp
 } from 'react-native/Libraries/StyleSheet/StyleSheet'
 &nbsp;
-type PropsType = {|
-    title : string,
-    tilteStyle? : TextStyleProp,
-    onPress? : () =&gt; Promise&lt;void&gt; | void,
-    style? : ViewStyleProp,
+export type PropsType = {|
+        onPress ? : () =&gt; Promise &lt; void&gt; | void,
+        name? : string,
+        id? : number,
 |};
 &nbsp;
-const Button = ({title, tilteStyle, onPress,style} : PropsType) : Node =&gt; {
+const TodoListCard = (
+    { name , id , onPress}: PropsType
+): Node =&gt; {
     return (
-        &lt;TouchableOpacity
-            onPress={onPress}
-            style={[styles.button, style]}
-        &gt;
-            &lt;Text style={[styles.title, tilteStyle]}&gt;{title}&lt;/Text&gt;
-        &lt;/TouchableOpacity&gt;
+        &lt;View style={styles.container}&gt;
+            &lt;Text style={{ color: "white" }}&gt;{name}&lt;/Text&gt;
+            &lt;Button
+            title="Delete"
+            // onPress={addItem}
+            tilteStyle={{ fontSize: 14 }}
+            style={{ backgroundColor: "red", width: 80, height: 40, borderRadius: 5, justifyContent: "center", alignItems: "center",  }}
+          /&gt;
+        &lt;/View&gt;
     )
 }
 &nbsp;
-export default Button;
+export default TodoListCard;
 &nbsp;
 const styles = StyleSheet.create({
-    button : {
-        backgroundColor : 'green',
+    container: {
+        flexDirection: 'row',  justifyContent:'space-between', height: 40, backgroundColor: "blue", marginBottom: 10, alignItems: 'center', borderRadius: 5,  paddingLeft:10
     },
-    title : {
-        color :"white",
-    }
 })</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
