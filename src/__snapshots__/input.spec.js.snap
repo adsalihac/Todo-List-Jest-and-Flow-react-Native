@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`input component renders correctly 1`] = `
+<TextInput
+  style={
+    Array [
+      Object {
+        "backgroundColor": "white",
+        "borderColor": "gray",
+        "borderRadius": 5,
+        "borderWidth": 1,
+        "flex": 1,
+        "height": 40,
+        "margin": 10,
+        "padding": 5,
+      },
+      undefined,
+    ]
+  }
+/>
+`;

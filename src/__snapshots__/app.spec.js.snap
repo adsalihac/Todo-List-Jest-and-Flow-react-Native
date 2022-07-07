@@ -4,13 +4,44 @@ exports[`app renders correctly 1`] = `
 <View
   style={
     Object {
-      "backgroundColor": "red",
+      "backgroundColor": "white",
       "flex": 1,
     }
   }
 >
-  <Text>
-    App
-  </Text>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+      }
+    }
+  >
+    <Input
+      onChangeText={[Function]}
+      placeholder="Enter task"
+      value=""
+    />
+    <Button
+      onPress={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "blue",
+          "borderRadius": 5,
+          "height": 40,
+          "justifyContent": "center",
+          "marginRight": 5,
+          "width": 80,
+        }
+      }
+      tilteStyle={
+        Object {
+          "fontSize": 14,
+        }
+      }
+      title="Click"
+    />
+  </View>
 </View>
 `;

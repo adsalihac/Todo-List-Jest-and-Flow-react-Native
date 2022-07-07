@@ -21,6 +21,7 @@ type PropsType = {|
 const Button = ({title, tilteStyle, onPress,style} : PropsType) : Node => {
     return (
         <TouchableOpacity
+            onPress={onPress}
             style={[styles.button, style]}
         >
             <Text style={[styles.title, tilteStyle]}>{title}</Text>
@@ -32,7 +33,7 @@ export default Button;
 
 const styles = StyleSheet.create({
     button : {
-        backgroundColor : 'red',
+        backgroundColor : 'green',
     },
     title : {
         color :"white",

@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`button component renders correctly 1`] = `
+<TouchableOpacity
+  onPress={[MockFunction]}
+  style={
+    Array [
+      Object {
+        "backgroundColor": "green",
+      },
+      undefined,
+    ]
+  }
+>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "white",
+        },
+        undefined,
+      ]
+    }
+  >
+    Click
+  </Text>
+</TouchableOpacity>
+`;

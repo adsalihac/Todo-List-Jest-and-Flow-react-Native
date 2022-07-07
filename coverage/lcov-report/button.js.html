@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for app.js</title>
+    <title>Code coverage report for button.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="prettify.css" />
     <link rel="stylesheet" href="base.css" />
@@ -19,13 +19,13 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="index.html">All files</a> app.js</h1>
+        <h1><a href="index.html">All files</a> button.js</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">60% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>3/5</span>
+                <span class='fraction'>3/3</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">50% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>2/4</span>
+                <span class='fraction'>1/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">60% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>3/5</span>
+                <span class='fraction'>3/3</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line medium'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -103,15 +103,7 @@
 <a name='L38'></a><a href='#L38'>38</a>
 <a name='L39'></a><a href='#L39'>39</a>
 <a name='L40'></a><a href='#L40'>40</a>
-<a name='L41'></a><a href='#L41'>41</a>
-<a name='L42'></a><a href='#L42'>42</a>
-<a name='L43'></a><a href='#L43'>43</a>
-<a name='L44'></a><a href='#L44'>44</a>
-<a name='L45'></a><a href='#L45'>45</a>
-<a name='L46'></a><a href='#L46'>46</a>
-<a name='L47'></a><a href='#L47'>47</a>
-<a name='L48'></a><a href='#L48'>48</a>
-<a name='L49'></a><a href='#L49'>49</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L41'></a><a href='#L41'>41</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -129,30 +121,22 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -161,53 +145,45 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// @flow
 &nbsp;
-import { Text, View } from 'react-native'
-import React, { Component } from 'react'
-import Button from './button'
-import Input from './input'
+&nbsp;
+import React from 'react'
+import {StyleSheet, Text , TouchableHighlight, TouchableOpacity, View} from 'react-native'
 &nbsp;
 import type {Node} from 'react'
 &nbsp;
-type PropsType = {||};
+import type {
+    TextStyleProp,
+    ViewStyleProp
+} from 'react-native/Libraries/StyleSheet/StyleSheet'
 &nbsp;
-type StateType = {
-    data : Array&lt;Object&gt;,
-    text : string,
-};
+type PropsType = {|
+    title : string,
+    tilteStyle? : TextStyleProp,
+    onPress? : () =&gt; Promise&lt;void&gt; | void,
+    style? : ViewStyleProp,
+|};
 &nbsp;
-class App extends Component&lt;PropsType, StateType&gt; {
-    constructor(props: PropsType) {
-        super(props);
-        this.state = {
-          data: [{},{}],
-          text: '',
-        };
-    }
-&nbsp;
-  render() : Node {
+const Button = ({title, tilteStyle, onPress,style} : PropsType) : Node =&gt; {
     return (
-      &lt;View style={{flex:1 , backgroundColor:"white"}}&gt;
-        &lt;View style={{flexDirection:'row' , alignItems:'center'}}&gt;
-          &lt;Input
-            placeholder={"Enter task"}
-            value={this.state.text}
-            onChangeText={<span class="fstat-no" title="function not covered" >(t</span>ext) =&gt; <span class="cstat-no" title="statement not covered" >this.setState({text : text})}</span>
-          /&gt;
-          &lt;Button
-          title="Click"
-          onPress={<span class="fstat-no" title="function not covered" >()</span> =&gt; {
-<span class="cstat-no" title="statement not covered" >            console.log("Button Clicked");</span>
-          }}
-          tilteStyle={{ fontSize : 14}}
-          style={{backgroundColor:"blue", width:80, height:40 , borderRadius: 5, justifyContent:"center", alignItems:"center" , marginRight:5}}
-        /&gt;
-        &lt;/View&gt;
-      &lt;/View&gt;
+        &lt;TouchableOpacity
+            onPress={onPress}
+            style={[styles.button, style]}
+        &gt;
+            &lt;Text style={[styles.title, tilteStyle]}&gt;{title}&lt;/Text&gt;
+        &lt;/TouchableOpacity&gt;
     )
-  }
 }
 &nbsp;
-export default App</pre></td></tr></table></pre>
+export default Button;
+&nbsp;
+const styles = StyleSheet.create({
+    button : {
+        backgroundColor : 'green',
+    },
+    title : {
+        color :"white",
+    }
+})</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->
