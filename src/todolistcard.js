@@ -26,7 +26,7 @@ const TodoListCard = (
             <Text style={{ color: "white" }}>{name}</Text>
             <Button
             title="Delete"
-            // onPress={addItem}
+            onPress={onPress}
             tilteStyle={{ fontSize: 14 }}
             style={{ backgroundColor: "red", width: 80, height: 40, borderRadius: 5, justifyContent: "center", alignItems: "center",  }}
           />

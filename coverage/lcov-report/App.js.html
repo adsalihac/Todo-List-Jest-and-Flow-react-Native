@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">93.33% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>14/14</span>
+                <span class='fraction'>14/15</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">83.33% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>5/5</span>
+                <span class='fraction'>5/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">92.85% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>13/13</span>
+                <span class='fraction'>13/14</span>
             </div>
         
             
@@ -151,10 +151,11 @@
 <a name='L86'></a><a href='#L86'>86</a>
 <a name='L87'></a><a href='#L87'>87</a>
 <a name='L88'></a><a href='#L88'>88</a>
-<a name='L89'></a><a href='#L89'>89</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L89'></a><a href='#L89'>89</a>
+<a name='L90'></a><a href='#L90'>90</a>
+<a name='L91'></a><a href='#L91'>91</a>
+<a name='L92'></a><a href='#L92'>92</a>
+<a name='L93'></a><a href='#L93'>93</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -180,6 +181,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -192,7 +196,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">3x</span>
@@ -211,12 +214,11 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">9x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">9x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -233,6 +235,12 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -241,74 +249,70 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// @flow
 &nbsp;
-import { Text, View , Alert} from 'react-native'
-import React, { Component } from 'react'
-import Button from './button'
-import Input from './input'
-import TodoList from './todolist'
+import {Text, View, Alert} from 'react-native';
+import React, {Component} from 'react';
+import Button from './button';
+import Input from './input';
+import TodoList from './todolist';
 &nbsp;
-import type { Node } from 'react'
-import { types } from '@babel/core'
+import type {Node} from 'react';
+import {types} from '@babel/core';
 &nbsp;
 // type ConnectPropsType = {
 //   addItem: () =&gt; Promise&lt;void&gt;,
 // }
 &nbsp;
-type PropsType = {|
-  |};
+type PropsType = {||};
 &nbsp;
 type StateType = {
   data: Array&lt;Object&gt;,
   text: string,
 };
 &nbsp;
-&nbsp;
-&nbsp;
 class App extends Component&lt;PropsType, StateType&gt; {
   constructor(props: PropsType) {
     super(props);
     this.state = {
-      data: [{ id: 1, name: 'data1' }, { id: 2, name: 'data2' }, { id: 3, name: 'data3' }],
+      data: [
+        {id: 1, name: 'data1'},
+        {id: 2, name: 'data2'},
+        {id: 3, name: 'data3'},
+      ],
       text: '',
     };
   }
 &nbsp;
-&nbsp;
   setData: (field: string) =&gt; (value: string) =&gt; void =
     (field: string) =&gt; (value: string) =&gt; {
-      this.setState({ [field]: value });
-    }
+      this.setState({[field]: value});
+    };
 &nbsp;
   addItem: () =&gt; void = () =&gt; {
-    const { data, text }
-      = this.state;
+    const {data, text} = this.state;
 &nbsp;
     if (text.length) {
-      const newData = { id: data.length + 1, name: text };
-      this.setState({ data: [...data, newData], text: '' });
-      console.log("newData", JSON.stringify(this.state.data));
+      const newData = {id: data.length + 1, name: text};
+      this.setState({data: [...data, newData], text: ''});
+      console.log('newData', JSON.stringify(this.state.data));
     } else {
-     Alert.alert("Alert", "Enter input", [{ text: "OK" }], {
-      cancelable: true,
-    });
-   
+      Alert.alert('Alert', 'Enter input', [{text: 'OK'}], {
+        cancelable: true,
+      });
     }
-  }
+  };
 &nbsp;
   render(): Node {
-&nbsp;
     const {
       addItem,
       setData,
-      state: { data, text }
+      state: {data, text},
     } = this;
 &nbsp;
-&nbsp;
     return (
-      &lt;View style={{ flex: 1, backgroundColor: "white" }}&gt;
-        &lt;View style={{ flexDirection: 'row', alignItems: 'center' }}&gt;
+      &lt;View style={{flex: 1, backgroundColor: 'white'}}&gt;
+        &lt;View style={{flexDirection: 'row', alignItems: 'center'}}&gt;
           &lt;Input
-            placeholder={"Enter task"}
+            placeholder={'Enter task'}
             value={text}
             onChangeText={setData('text')}
           /&gt;
@@ -316,25 +320,33 @@ class App extends Component&lt;PropsType, StateType&gt; {
           &lt;Button
             title="Click"
             onPress={addItem}
-            tilteStyle={{ fontSize: 14 }}
-            style={{ backgroundColor: "blue", width: 80, height: 40, borderRadius: 5, justifyContent: "center", alignItems: "center", marginRight: 5 }}
+            tilteStyle={{fontSize: 14}}
+            style={{
+              backgroundColor: 'blue',
+              width: 80,
+              height: 40,
+              borderRadius: 5,
+              justifyContent: 'center',
+              alignItems: 'center',
+              marginRight: 5,
+            }}
           /&gt;
         &lt;/View&gt;
-&nbsp;
-        &lt;TodoList data={data} /&gt;
+        &lt;TodoList data={data} setState={<span class="fstat-no" title="function not covered" >va</span>l =&gt; <span class="cstat-no" title="statement not covered" >this.setState({data: val})}</span> /&gt;
       &lt;/View&gt;
-    )
+    );
   }
 }
 &nbsp;
-export default App</pre></td></tr></table></pre>
+export default App;
+&nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Fri Jul 08 2022 00:24:33 GMT+0530 (India Standard Time)
+                at Fri Jul 08 2022 01:40:05 GMT+0530 (India Standard Time)
             </div>
         <script src="prettify.js"></script>
         <script>

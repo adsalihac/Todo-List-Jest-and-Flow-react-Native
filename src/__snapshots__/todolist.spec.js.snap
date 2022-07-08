@@ -20,3 +20,24 @@ exports[`todolist component renders correctly 1`] = `
   />
 </View>
 `;
+
+exports[`todolist component renders correctly 2`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+      "margin": 10,
+    }
+  }
+>
+  <FlatList
+    ListEmptyComponent={
+      <Text>
+        No data
+      </Text>
+    }
+    keyExtractor={[Function]}
+    renderItem={[Function]}
+  />
+</View>
+`;
