@@ -23,7 +23,7 @@ export type PropsType = {|
 |};
 
 const TodoList = ({data, onChangeData}: PropsType): Node => {
-  const handleDelete = (deleteIndex: numnber) => {
+  const handleDelete = (deleteIndex: number) => {
     const filterdData = data.filter((data, index) => index !== deleteIndex);
     onChangeData && onChangeData(filterdData);
   };
