@@ -12,24 +12,24 @@ import React from 'react';
 import type {Node} from 'react';
 import TodoListCard from './todolistcard';
 
+
 import type {
   TextStyleProp,
   ViewStyleProp,
 } from 'react-native/Libraries/StyleSheet/StyleSheet';
 
+
 export type PropsType = {|
   data: Array<Object>,
-  // setState?: (value: Array<Object>) => void,
-  setState? : (val : Array<Object>) => void
+  onChangeData ?: (value: Array<Object>) => void,
 |};
 
-const TodoList = ({data, setState}: PropsType): Node => {
+const TodoList = ({data , onChangeData}: PropsType): Node => {
   
-
   const handleDelete = (item: Object) => {
     const filterdData = data.filter(data => item.id !== data.id);
-    setState(filterdData);
-    // this.setState({[field]: value});
+    onChangeData && onChangeData(filterdData);
+
   };
 
   return (

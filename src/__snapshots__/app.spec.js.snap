@@ -60,7 +60,7 @@ exports[`app renders correctly 1`] = `
         },
       ]
     }
-    setState={[Function]}
+    onChangeData={[Function]}
   />
 </View>
 `;
@@ -129,7 +129,7 @@ exports[`app renders correctly with empty inputs 1`] = `
         },
       ]
     }
-    setState={[Function]}
+    onChangeData={[Function]}
   />
 </View>
 `;

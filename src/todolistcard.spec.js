@@ -6,6 +6,9 @@ import { findAllWithType, findWithType } from 'react-shallow-testutils'
 
 import TodoListCard from './todolistcard'
 
+import Button from './button'
+
+
 import type { PropsType } from './todolistcard'
 
 const renderer = new ShallowRenderer();
@@ -29,6 +32,18 @@ describe('todolistcard component', () => {
         expect(result).toMatchSnapshot();
     }
     );
+
+    it('renders correctly with props', () => {
+        const result = renderTodoListCard({
+            onPress: () => {},
+            name: 'test',
+            id: 1,
+        });
+        expect(result).toMatchSnapshot();
+    });
+
+    
+
 
 
 

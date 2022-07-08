@@ -42,3 +42,49 @@ exports[`todolistcard component renders correctly 1`] = `
   />
 </View>
 `;
+
+exports[`todolistcard component renders correctly with props 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "blue",
+      "borderRadius": 5,
+      "flexDirection": "row",
+      "height": 40,
+      "justifyContent": "space-between",
+      "marginBottom": 10,
+      "paddingLeft": 10,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "white",
+      }
+    }
+  >
+    test
+  </Text>
+  <Button
+    onPress={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "red",
+        "borderRadius": 5,
+        "height": 40,
+        "justifyContent": "center",
+        "width": 80,
+      }
+    }
+    tilteStyle={
+      Object {
+        "fontSize": 14,
+      }
+    }
+    title="Delete"
+  />
+</View>
+`;

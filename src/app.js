@@ -82,10 +82,10 @@ class App extends Component<PropsType, StateType> {
             }}
           />
         </View>
-        <TodoList data={data} setState={setData('data')} />
+        <TodoList data={data} onChangeData={(val)=> this.setState({data : val}) }  />
       </View>
     );
   }
 }
-
+// setState={(value)=>this.setState({data : value})}
 export default App;
