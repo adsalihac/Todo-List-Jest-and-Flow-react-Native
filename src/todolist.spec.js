@@ -42,15 +42,22 @@ describe('todolist component', () => {
 
   it('renders a flatlist with data', () => {
     const result = renderTodoList();
-    // const flatlist = findAllWithType(result, FlatList);
+    
+    const flatlist = findAllWithType(result, FlatList);
+    console.log("🚀 ~ file: todolist.spec.js ~ line 47 ~ it ~ flatlist", flatlist)
+    // expect(flatlist[0].props.data).toBeUndefined();
+    const todos = [{ name: 'taskname' ,  id : 1 }, { name: 'taskname' ,  id : 2 }, { name: 'taskname' ,  id : 3 }];
+    // expect(flatlist[0].props.data).toEqual(todos);
+    flatlist[0].props.data(todos);
+
     // expect(flatlist.length).toBe(1);
-    const sections = findWithType(result, FlatList).props.renderItem({
-      item: 'hello',
-    });
-    console.log(
-      '🚀 ~ file: todolist.spec.js ~ line 41 ~ sections ~ sections',
-      sections,
-    );
+    // const sections = findWithType(result, FlatList).props.renderItem({
+    //   item: 'hello',
+    // });
+    // console.log(
+    //   '🚀 ~ file: todolist.spec.js ~ line 41 ~ sections ~ sections',
+    //   sections,
+    // );
     // expect(isComponentOfType(sections, FlatList)).toBe(true);
     // expect(isComponentOfType(flatList, TodoListCard)).toBe(true);
   });
