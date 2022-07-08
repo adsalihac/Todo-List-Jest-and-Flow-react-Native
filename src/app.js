@@ -66,7 +66,6 @@ class App extends Component<PropsType, StateType> {
             value={text}
             onChangeText={setData('text')}
           />
-
           <Button
             title="Click"
             onPress={addItem}
@@ -82,7 +81,10 @@ class App extends Component<PropsType, StateType> {
             }}
           />
         </View>
-        <TodoList data={data} onChangeData={(val)=> this.setState({data : val}) }  />
+        <TodoList
+          data={data}
+          onChangeData={val => this.setState({data: val})}
+        />
       </View>
     );
   }

@@ -12,24 +12,20 @@ import React from 'react';
 import type {Node} from 'react';
 import TodoListCard from './todolistcard';
 
-
 import type {
   TextStyleProp,
   ViewStyleProp,
 } from 'react-native/Libraries/StyleSheet/StyleSheet';
 
-
 export type PropsType = {|
   data: Array<Object>,
-  onChangeData ?: (value: Array<Object>) => void,
+  onChangeData?: (value: Array<Object>) => void,
 |};
 
-const TodoList = ({data , onChangeData}: PropsType): Node => {
-  
-  const handleDelete = (item: Object) => {
-    const filterdData = data.filter(data => item.id !== data.id);
+const TodoList = ({data, onChangeData}: PropsType): Node => {
+  const handleDelete = (deleteIndex: numnber) => {
+    const filterdData = data.filter((data, index) => index !== deleteIndex);
     onChangeData && onChangeData(filterdData);
-
   };
 
   return (
@@ -37,8 +33,8 @@ const TodoList = ({data , onChangeData}: PropsType): Node => {
       <FlatList
         data={data}
         ListEmptyComponent={<Text>No data</Text>}
-        renderItem={({item}) => (
-          <TodoListCard name={item.name} onPress={() => handleDelete(item)} />
+        renderItem={({item, index}) => (
+          <TodoListCard name={item.name} onPress={() => handleDelete(index)} />
         )}
         keyExtractor={item => item.id.toString()}
       />
