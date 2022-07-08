@@ -1,50 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1657224605442" clover="3.2.0">
-  <project timestamp="1657224605443" name="All files">
-    <metrics statements="30" coveredstatements="27" conditionals="2" coveredconditionals="2" methods="16" coveredmethods="11" elements="48" coveredelements="40" complexity="0" loc="30" ncloc="30" packages="1" files="5" classes="5"/>
-    <file name="app.js" path="/Users/moshibilpk/Documents/GitHub/Todo-List-Jest-and-Flow-react-Native/src/app.js">
-      <metrics statements="14" coveredstatements="13" conditionals="2" coveredconditionals="2" methods="6" coveredmethods="5"/>
+<coverage generated="1657262577852" clover="3.2.0">
+  <project timestamp="1657262577852" name="All files">
+    <metrics statements="30" coveredstatements="27" conditionals="4" coveredconditionals="2" methods="15" coveredmethods="11" elements="49" coveredelements="40" complexity="0" loc="30" ncloc="30" packages="1" files="5" classes="5"/>
+    <file name="app.js" path="/Users/adsalihac/Desktop/RNProjects/todolistjest/src/app.js">
+      <metrics statements="14" coveredstatements="14" conditionals="2" coveredconditionals="2" methods="6" coveredmethods="6"/>
+      <line num="24" count="1" type="stmt"/>
       <line num="25" count="1" type="stmt"/>
-      <line num="26" count="1" type="stmt"/>
-      <line num="37" count="9" type="stmt"/>
-      <line num="38" count="2" type="stmt"/>
-      <line num="41" count="1" type="stmt"/>
-      <line num="42" count="3" type="stmt"/>
-      <line num="44" count="3" type="cond" truecount="2" falsecount="0"/>
+      <line num="36" count="11" type="stmt"/>
+      <line num="37" count="2" type="stmt"/>
+      <line num="40" count="1" type="stmt"/>
+      <line num="41" count="2" type="stmt"/>
+      <line num="43" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="44" count="1" type="stmt"/>
       <line num="45" count="1" type="stmt"/>
       <line num="46" count="1" type="stmt"/>
-      <line num="47" count="1" type="stmt"/>
-      <line num="49" count="2" type="stmt"/>
-      <line num="60" count="9" type="stmt"/>
-      <line num="62" count="9" type="stmt"/>
-      <line num="86" count="0" type="stmt"/>
+      <line num="48" count="1" type="stmt"/>
+      <line num="59" count="11" type="stmt"/>
+      <line num="61" count="11" type="stmt"/>
+      <line num="85" count="1" type="stmt"/>
     </file>
-    <file name="button.js" path="/Users/moshibilpk/Documents/GitHub/Todo-List-Jest-and-Flow-react-Native/src/button.js">
+    <file name="button.js" path="/Users/adsalihac/Desktop/RNProjects/todolistjest/src/button.js">
       <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <line num="21" count="4" type="stmt"/>
       <line num="22" count="6" type="stmt"/>
       <line num="34" count="4" type="stmt"/>
     </file>
-    <file name="input.js" path="/Users/moshibilpk/Documents/GitHub/Todo-List-Jest-and-Flow-react-Native/src/input.js">
+    <file name="input.js" path="/Users/adsalihac/Desktop/RNProjects/todolistjest/src/input.js">
       <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <line num="20" count="2" type="stmt"/>
-      <line num="21" count="3" type="stmt"/>
-      <line num="33" count="2" type="stmt"/>
+      <line num="17" count="2" type="stmt"/>
+      <line num="18" count="3" type="stmt"/>
+      <line num="30" count="2" type="stmt"/>
     </file>
-    <file name="todolist.js" path="/Users/moshibilpk/Documents/GitHub/Todo-List-Jest-and-Flow-react-Native/src/todolist.js">
-      <metrics statements="7" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="3"/>
-      <line num="25" count="2" type="stmt"/>
-      <line num="26" count="7" type="stmt"/>
-      <line num="27" count="0" type="stmt"/>
-      <line num="28" count="0" type="stmt"/>
-      <line num="30" count="7" type="stmt"/>
-      <line num="36" count="1" type="stmt"/>
-      <line num="38" count="1" type="stmt"/>
+    <file name="todolist.js" path="/Users/adsalihac/Desktop/RNProjects/todolistjest/src/todolist.js">
+      <metrics statements="7" coveredstatements="4" conditionals="2" coveredconditionals="0" methods="6" coveredmethods="2"/>
+      <line num="27" count="2" type="stmt"/>
+      <line num="29" count="7" type="stmt"/>
+      <line num="30" count="0" type="stmt"/>
+      <line num="31" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="35" count="7" type="stmt"/>
+      <line num="41" count="0" type="stmt"/>
+      <line num="43" count="1" type="stmt"/>
     </file>
-    <file name="todolistcard.js" path="/Users/moshibilpk/Documents/GitHub/Todo-List-Jest-and-Flow-react-Native/src/todolistcard.js">
+    <file name="todolistcard.js" path="/Users/adsalihac/Desktop/RNProjects/todolistjest/src/todolistcard.js">
       <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <line num="21" count="3" type="stmt"/>
-      <line num="24" count="1" type="stmt"/>
+      <line num="24" count="2" type="stmt"/>
       <line num="39" count="3" type="stmt"/>
     </file>
   </project>

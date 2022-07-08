@@ -6,6 +6,7 @@ import ShallowRenderer from 'react-test-renderer/shallow';
 
 import Input from './input'
 import Button from './button'
+import TodoList from './todolist'
 
 import App from './app';
 
@@ -40,14 +41,36 @@ describe('app', () => {
     }
     );
 
+    it('renders a todolist', () => {
+        const result = renderApp();
+        const todolists = findAllWithType(result, TodoList);
+        expect(todolists.length).toBe(1);
+    }   
+    );
+
+    it('renders a todolist with data', () => {
+        const result = renderApp();
+        const todolists = findAllWithType(result, TodoList);
+        console.log("🚀 ~ file: app.spec.js ~ line 54 ~ it ~ todolists", todolists[0].props.data)
+        expect(todolists[0].props.data.length).toEqual(3);
+    }
+    );
+
+
+
+
     it('renders button with correct action', () => {
         const result = renderApp();
 
         const taskInput = findWithType(result, Input);
-
         const taskname = 'taskname';
-
         taskInput.props.onChangeText(taskname);
+
+        const todolist = findWithType(result, TodoList);
+        const todos = [{ name: 'taskname' }];
+        todolist.props.onChangeData(todos);
+        // console.log("🚀 ~ file: app.spec.js ~ line 73 ~ it ~ todolist.props", todolist.props.onChangeData)
+
 
         const button = findWithType(result, Button);
         button.props.onPress();
@@ -90,24 +113,24 @@ describe('app', () => {
 
 
 
-    it('renders correctly with empty inputs', () => {
-        const result = renderApp();
-        expect(result).toMatchSnapshot();
+    // it('renders correctly with empty inputs', () => {
+    //     const result = renderApp();
+    //     expect(result).toMatchSnapshot();
 
-        expect(findAllWithType(result, Input).length).toBe(1);
+    //     expect(findAllWithType(result, Input).length).toBe(1);
 
-        // console.log("Button", findAllWithType(result, Input).length);
+    //     // console.log("Button", findAllWithType(result, Input).length);
 
-        const button = findWithType(result, Button);
-        button.props.onPress(); 
-        // button.props.onPress();
-        // console.log("BUTTON PROB", button.props.onPress);
+    //     const button = findWithType(result, Button);
+    //     button.props.onPress(); 
+    //     // button.props.onPress();
+    //     // console.log("BUTTON PROB", button.props.onPress);
 
-        const output = renderer.getRenderOutput();
-        const task = findAllWithType(output, Input);
-        console.log( findAllWithType(output, Input).length);
+    //     const output = renderer.getRenderOutput();
+    //     const task = findAllWithType(output, Input);
+    //     console.log( findAllWithType(output, Input).length);
 
 
-    });
+    // });
 
 });
