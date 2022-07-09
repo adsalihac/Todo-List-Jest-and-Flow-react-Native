@@ -105,7 +105,34 @@
 <a name='L40'></a><a href='#L40'>40</a>
 <a name='L41'></a><a href='#L41'>41</a>
 <a name='L42'></a><a href='#L42'>42</a>
-<a name='L43'></a><a href='#L43'>43</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -126,8 +153,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -143,60 +168,95 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// @flow
 &nbsp;
-import { View, Text, TextInput, StyleSheet, FlatList, TouchableOpacity } from 'react-native'
-import React from 'react'
+import {
+  View,
+  Text,
+  TextInput,
+  StyleSheet,
+  FlatList,
+  TouchableOpacity,
+} from 'react-native';
+import React from 'react';
 &nbsp;
-import Button from './button'
+import Button from './button';
 &nbsp;
-import type { Node } from 'react'
+import type {Node} from 'react';
 &nbsp;
 import type {
-    TextStyleProp,
-    ViewStyleProp
-} from 'react-native/Libraries/StyleSheet/StyleSheet'
+  TextStyleProp,
+  ViewStyleProp,
+} from 'react-native/Libraries/StyleSheet/StyleSheet';
 &nbsp;
 export type PropsType = {|
-        onPress ? : () =&gt; Promise &lt; void&gt; | void,
-        name? : string,
-        id? : number,
+  onPress?: () =&gt; Promise&lt;void&gt; | void,
+  name?: string,
+  id?: number,
 |};
 &nbsp;
-const TodoListCard = (
-    { name , id , onPress}: PropsType
-): Node =&gt; {
-    return (
-        &lt;View style={styles.container}&gt;
-            &lt;Text style={{ color: "white" }}&gt;{name}&lt;/Text&gt;
-            &lt;Button
-            title="Delete"
-            onPress={onPress}
-            tilteStyle={{ fontSize: 14 }}
-            style={{ backgroundColor: "red", width: 80, height: 40, borderRadius: 5, justifyContent: "center", alignItems: "center",  }}
-          /&gt;
-        &lt;/View&gt;
-    )
-}
+const TodoListCard = ({name, id, onPress}: PropsType): Node =&gt; {
+  return (
+    &lt;View style={styles.container}&gt;
+      &lt;Text style={{color: 'white'}}&gt;{name}&lt;/Text&gt;
+      &lt;Button
+        title="Delete"
+        onPress={onPress}
+        tilteStyle={{fontSize: 14}}
+        style={{
+          backgroundColor: 'red',
+          width: 80,
+          height: 40,
+          borderRadius: 5,
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}
+      /&gt;
+    &lt;/View&gt;
+  );
+};
 &nbsp;
 export default TodoListCard;
 &nbsp;
 const styles = StyleSheet.create({
-    container: {
-        flexDirection: 'row',  justifyContent:'space-between', height: 40, backgroundColor: "blue", marginBottom: 10, alignItems: 'center', borderRadius: 5,  paddingLeft:10
-    },
-})</pre></td></tr></table></pre>
+  container: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    height: 40,
+    backgroundColor: 'blue',
+    marginBottom: 10,
+    alignItems: 'center',
+    borderRadius: 5,
+    paddingLeft: 10,
+  },
+});
+&nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Fri Jul 08 2022 12:12:57 GMT+0530 (India Standard Time)
+                at Fri Jul 08 2022 16:06:45 GMT+0530 (India Standard Time)
             </div>
         <script src="prettify.js"></script>
         <script>

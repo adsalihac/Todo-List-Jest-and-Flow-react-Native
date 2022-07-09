@@ -48,7 +48,7 @@ describe('input component', () => {
     const result = renderInput({style});
     const input = findAllWithType(result, TextInput)[0];
     expect(input.props.style[1]).toMatchObject(style);
-    console.log('input.props.style', input.props.style[1]);
+    // console.log('input.props.style', input.props.style[1]);
     // console.log(" findAllWithType" ,  findAllWithType(result, TextInput)[0]);
   });
 });

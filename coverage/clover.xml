@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1657262577852" clover="3.2.0">
-  <project timestamp="1657262577852" name="All files">
-    <metrics statements="30" coveredstatements="27" conditionals="4" coveredconditionals="2" methods="15" coveredmethods="11" elements="49" coveredelements="40" complexity="0" loc="30" ncloc="30" packages="1" files="5" classes="5"/>
+<coverage generated="1657276605385" clover="3.2.0">
+  <project timestamp="1657276605385" name="All files">
+    <metrics statements="30" coveredstatements="28" conditionals="4" coveredconditionals="2" methods="15" coveredmethods="12" elements="49" coveredelements="42" complexity="0" loc="30" ncloc="30" packages="1" files="5" classes="5"/>
     <file name="app.js" path="/Users/adsalihac/Desktop/RNProjects/todolistjest/src/app.js">
       <metrics statements="14" coveredstatements="14" conditionals="2" coveredconditionals="2" methods="6" coveredmethods="6"/>
       <line num="24" count="1" type="stmt"/>
@@ -17,7 +17,7 @@
       <line num="48" count="1" type="stmt"/>
       <line num="59" count="11" type="stmt"/>
       <line num="61" count="11" type="stmt"/>
-      <line num="85" count="1" type="stmt"/>
+      <line num="86" count="1" type="stmt"/>
     </file>
     <file name="button.js" path="/Users/adsalihac/Desktop/RNProjects/todolistjest/src/button.js">
       <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
@@ -32,20 +32,20 @@
       <line num="30" count="2" type="stmt"/>
     </file>
     <file name="todolist.js" path="/Users/adsalihac/Desktop/RNProjects/todolistjest/src/todolist.js">
-      <metrics statements="7" coveredstatements="4" conditionals="2" coveredconditionals="0" methods="6" coveredmethods="2"/>
-      <line num="27" count="2" type="stmt"/>
-      <line num="29" count="7" type="stmt"/>
-      <line num="30" count="0" type="stmt"/>
-      <line num="31" count="0" type="cond" truecount="0" falsecount="2"/>
-      <line num="35" count="7" type="stmt"/>
-      <line num="41" count="0" type="stmt"/>
-      <line num="43" count="1" type="stmt"/>
+      <metrics statements="7" coveredstatements="5" conditionals="2" coveredconditionals="0" methods="6" coveredmethods="3"/>
+      <line num="25" count="2" type="stmt"/>
+      <line num="27" count="6" type="stmt"/>
+      <line num="28" count="0" type="stmt"/>
+      <line num="29" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="32" count="6" type="stmt"/>
+      <line num="38" count="1" type="stmt"/>
+      <line num="40" count="1" type="stmt"/>
     </file>
     <file name="todolistcard.js" path="/Users/adsalihac/Desktop/RNProjects/todolistjest/src/todolistcard.js">
       <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <line num="21" count="3" type="stmt"/>
-      <line num="24" count="2" type="stmt"/>
-      <line num="39" count="3" type="stmt"/>
+      <line num="28" count="3" type="stmt"/>
+      <line num="29" count="2" type="stmt"/>
+      <line num="51" count="3" type="stmt"/>
     </file>
   </project>
 </coverage>

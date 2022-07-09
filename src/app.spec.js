@@ -51,7 +51,7 @@ describe('app', () => {
     it('renders a todolist with data', () => {
         const result = renderApp();
         const todolists = findAllWithType(result, TodoList);
-        console.log("🚀 ~ file: app.spec.js ~ line 54 ~ it ~ todolists", todolists[0].props.data)
+        // console.log("🚀 ~ file: app.spec.js ~ line 54 ~ it ~ todolists", todolists[0].props.data)
         expect(todolists[0].props.data.length).toEqual(3);
     }
     );
@@ -69,8 +69,6 @@ describe('app', () => {
         const todolist = findWithType(result, TodoList);
         const todos = [{ name: 'taskname' }];
         todolist.props.onChangeData(todos);
-        // console.log("🚀 ~ file: app.spec.js ~ line 73 ~ it ~ todolist.props", todolist.props.onChangeData)
-
 
         const button = findWithType(result, Button);
         button.props.onPress();
@@ -86,7 +84,7 @@ describe('app', () => {
         taskInput.props.onChangeText('');
         expect(instance.state.text).toBe(''); //true
 
-        console.log("TEXT", instance.state.text);
+        // console.log("TEXT", instance.state.text);
 
     //     global.alert = jest.fn();
     //   expect(global.alert).toHaveBeenCalledTimes(1);
