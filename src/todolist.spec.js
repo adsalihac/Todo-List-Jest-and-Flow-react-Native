@@ -14,12 +14,14 @@ import type { PropsType } from './todolist';
 
 const renderer = new ShallowRenderer();
 
-const renderTodoList = ({ data , onChangeData}: PropsType = {}) => {
+const renderTodoList = ({ data, onChangeData }: PropsType = {}) => {
   renderer.render(<TodoList data={data} onChangeData={onChangeData} />);
   return renderer.getRenderOutput();
 };
 
-const mockDataTodos  = [
+
+
+const mockDataTodos = [
   {
     id: 'id-1',
     name: 'Todo-1',
@@ -36,11 +38,7 @@ const mockDataTodos  = [
 
 
 describe('todolist component', () => {
-  
-  it('renders correctly', () => {
-    const result = renderTodoList();
-    expect(result).toMatchSnapshot();
-  });
+
   it('renders correctly', () => {
     const result = renderTodoList();
     expect(result).toMatchSnapshot();
@@ -53,35 +51,40 @@ describe('todolist component', () => {
   });
 
   it('renders a flatlist with data', () => {
-    const result = renderTodoList();
-    console.log("🚀 ~ file: todolist.spec.js ~ line 57 ~ it ~ result", result.props)
 
+    const result = renderTodoList({ data: mockDataTodos, onChangeData: jest.fn() });
     const flatlist = findWithType(result, FlatList);
-    console.log("🚀 ~ file: todolist.spec.js ~ line 68 ~ it ~ flatlist", flatlist)
-
-    flatlist.props.renderItem({ item: { id: 1, text: 'test' } , index: 0 });
-
-    const todoListCards = findAllWithType(result, TodoListCard);
-    expect(todoListCards.length).toBe(0);
-
-  });
+    expect(flatlist.props.data).toEqual(mockDataTodos);
 
 
+    const renderItem = flatlist.props.renderItem;
+
+    const renderItemResult = renderItem({
+      item: mockDataTodos[0],
+      index: 0,
+    });
+    renderItemResult.props.onPress();
+
+    // const button = findWithType(result, Button);
+    // button.props.onPress();
+
+  }
+  );
 
   it('renders a flatlist with no data', () => {
-    const result = renderTodoList();
+    const result = renderTodoList({ data: [] });
 
-    const flatlist = findAllWithType(result, FlatList);
-    expect(flatlist.length).toBe(1);
+    const flatlist = findWithType(result, FlatList);
+    expect(flatlist.props.data.length).toBe(0);
 
-    const todoListCards = findAllWithType(result, TodoListCard);
-    expect(todoListCards.length).toBe(0);
-
-    // const noData = findWithType(result, Text);
+    const noData = findAllWithType(result, Text);
+    console.log("🚀 ~ file: todolist.spec.js ~ line 84 ~ it ~ noData", noData)
     // console.log("🚀 ~ file: todolist.spec.js ~ line 81 ~ it ~ noData", noData)
     // expect(noData.props.children).toBe('No todos');
 
   });
+
+
 
   it('should flatlist return keyExtractor correctly', () => {
     const result = renderTodoList();

@@ -68,7 +68,7 @@ exports[`todolistcard component renders correctly with props 1`] = `
     test
   </Text>
   <Button
-    onPress={[Function]}
+    onPress={[MockFunction]}
     style={
       Object {
         "alignItems": "center",

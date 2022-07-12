@@ -10,6 +10,7 @@ import Button from './button'
 
 
 import type { PropsType } from './todolistcard'
+import JSDOMEnvironment from 'jest-environment-jsdom';
 
 const renderer = new ShallowRenderer();
 
@@ -35,13 +36,21 @@ describe('todolistcard component', () => {
 
     it('renders correctly with props', () => {
         const result = renderTodoListCard({
-            onPress: () => {},
+            onPress: jest.fn(),
             name: 'test',
             id: 1,
         });
         expect(result).toMatchSnapshot();
     });
 
+    
+
+    it('renders a button', () => {
+        const result = renderTodoListCard();
+        const button = findAllWithType(result, Button);
+        expect(button.length).toBe(1);
+    }
+    );
     
 
 
